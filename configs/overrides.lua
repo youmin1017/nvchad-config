@@ -73,4 +73,16 @@ M.cmp = {
   }
 }
 
+M.nvimtree = {
+  view = {
+    mappings = {
+      custom_only = false,
+      list = {
+        { key = {"<CR>", "l", "o"}, action = "edit" },
+        { key = "?", action = "toggle_help" },
+      }
+    }
+  }
+}
+
 return M
