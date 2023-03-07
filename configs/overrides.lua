@@ -74,6 +74,9 @@ M.cmp = {
 }
 
 M.nvimtree = {
+  trash = {
+    cmd = "trash -F",
+  },
   view = {
     mappings = {
       custom_only = false,
