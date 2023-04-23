@@ -49,7 +49,31 @@ local plugins = {
     opts = overrides.cmp,
   },
 
+  {
+    "NvChad/nvterm",
+    opts = overrides.nvterm,
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    opts = overrides.cmp,
+  },
+
+  -- Only load whichkey after all the gui
+  {
+    "folke/which-key.nvim",
+    opts = overrides.whichkey,
+  },
+
+
   -- Install a plugin
+
+  -- To make a plugin not be loaded
+  -- {
+  --   "NvChad/nvim-colorizer.lua",
+  --   enabled = false
+  -- },
+
   {
     "max397574/better-escape.nvim",
     event = "InsertEnter",
@@ -58,17 +82,16 @@ local plugins = {
     end,
   },
 
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
-
-  -- Uncomment if you want to re-enable which-key
+   -- autoclose tags  
   {
-    "folke/which-key.nvim",
-    enabled = true,
+    "windwp/nvim-ts-autotag",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
+
 }
 
 return plugins

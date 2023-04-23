@@ -1,7 +1,13 @@
-local autocmd = vim.api.nvim_create_autocmd
+local opt = vim.opt
 
+-------------------------------------- options ------------------------------------------
+vim.wo.wrap = false
+
+-------------------------------------- autocmnds ------------------------------------------
+local autocmd = vim.api.nvim_create_autocmd
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+

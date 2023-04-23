@@ -1,6 +1,14 @@
 ---@type MappingsTable
 local M = {}
 
+M.disabled = {
+  n = {
+    ["<leader>f"] = "",
+    ["<leader>e"] = "",
+    ["<C-s>"] = "",
+  }
+}
+
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
@@ -14,6 +22,22 @@ M.general = {
   },
 }
 
--- more keybinds!
+M.telescope = {
+  n = {
+    ["<leader>di"] = { "<cmd> Telescope diagnostics <CR>", "list diagnostics" },
+    ["<leader>fc"] = { "<cmd> Telescope command_history <CR>", "list command historys" },
+  }
+}
+
+M.lspconfig = {
+  n = {
+    ["<leader>q"] = {
+      function()
+        vim.diagnostic.open_float { border = "rounded" }
+      end,
+      "floating diagnostic",
+    },
+  }
+}
 
 return M
