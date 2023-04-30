@@ -19,7 +19,7 @@ M.treesitter = {
   indent = {
     enable = true,
     disable = {
-      "python"
+      "python",
     },
   },
 }
@@ -40,10 +40,18 @@ M.mason = {
 
 -- git support in nvimtree
 M.nvimtree = {
+  on_attach = require "custom.configs.nvimtree",
+  trash = {
+    cmd = "trash -F",
+  },
+  experimental = {
+    git = {
+      async = true,
+    },
+  },
   git = {
     enable = true,
   },
-
   renderer = {
     highlight_git = true,
     icons = {
@@ -54,7 +62,7 @@ M.nvimtree = {
   },
 }
 
-local actions = require("telescope.actions")
+local actions = require "telescope.actions"
 M.telescope = {
   defaults = {
     mappings = {
@@ -64,33 +72,18 @@ M.telescope = {
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
       },
-    }
-  }
+    },
+  },
 }
 
-local cmp = require("cmp")
+local cmp = require "cmp"
 M.cmp = {
   mapping = {
     ["<C-p>"] = nil,
     ["<C-n>"] = nil,
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<C-j>"] = cmp.mapping.select_next_item(),
-  }
-}
-
-M.nvimtree = {
-  trash = {
-    cmd = "trash -F",
   },
-  view = {
-    mappings = {
-      custom_only = false,
-      list = {
-        { key = {"<CR>", "l", "o"}, action = "edit" },
-        { key = "?", action = "toggle_help" },
-      }
-    }
-  }
 }
 
 M.nvterm = {
@@ -103,8 +96,8 @@ M.nvterm = {
         height = 0.6,
         border = "single",
       },
-    }
-  }
+    },
+  },
 }
 
 M.cmp = {
@@ -114,8 +107,8 @@ M.cmp = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-s>"] = require("cmp").mapping.complete(),
-    ["<C-Space>"] = {}
-  }
+    ["<C-Space>"] = {},
+  },
 }
 
 M.whichkey = {
