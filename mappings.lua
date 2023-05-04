@@ -24,7 +24,7 @@ M.general = {
 
 M.telescope = {
   n = {
-    ["<leader>di"] = { "<cmd> Telescope diagnostics <CR>", "list diagnostics" },
+    ["<leader>fd"] = { "<cmd> Telescope diagnostics <CR>", "list diagnostics" },
     ["<leader>fc"] = { "<cmd> Telescope command_history <CR>", "list command historys" },
   }
 }
