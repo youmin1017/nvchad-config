@@ -6,7 +6,7 @@ M.disabled = {
     ["<leader>f"] = "",
     ["<leader>e"] = "",
     ["<C-s>"] = "",
-  }
+  },
 }
 
 M.general = {
@@ -17,8 +17,10 @@ M.general = {
   },
 
   x = {
-    ["<"] = { "<gv", "indent backword and stay in visual mode"},
-    [">"] = { ">gv", "indent forward and stay in visual mode"}
+    ["<"] = { "<gv", "indent backword and stay in visual mode" },
+    [">"] = { ">gv", "indent forward and stay in visual mode" },
+    ["J"] = { ":move '>+1<CR>gv-gv", "move selected block up and stay in visual mode" },
+    ["K"] = { ":move '<-2<CR>gv-gv", "move selected down and stay in visual mode" },
   },
 }
 
@@ -26,7 +28,7 @@ M.telescope = {
   n = {
     ["<leader>fd"] = { "<cmd> Telescope diagnostics <CR>", "list diagnostics" },
     ["<leader>fc"] = { "<cmd> Telescope command_history <CR>", "list command historys" },
-  }
+  },
 }
 
 M.lspconfig = {
@@ -37,7 +39,7 @@ M.lspconfig = {
       end,
       "floating diagnostic",
     },
-  }
+  },
 }
 
 return M

@@ -7,6 +7,7 @@ local servers = { "html", "cssls", "tsserver", "clangd", "pyright", "prismals",
                   "tailwindcss",
                 }
 
+capabilities.offsetEncoding = { "utf-16" }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,

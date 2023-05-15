@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -12,14 +12,14 @@ local plugins = {
       {
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
-          require("custom.configs.null-ls")
+          require "custom.configs.null-ls"
         end,
       },
     },
 
     config = function()
-      require("plugins.configs.lspconfig")
-      require("custom.configs.lspconfig")
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
     end,
   },
 
@@ -65,7 +65,6 @@ local plugins = {
     opts = overrides.whichkey,
   },
 
-
   -- Install a plugin
 
   -- To make a plugin not be loaded
@@ -82,11 +81,11 @@ local plugins = {
     end,
   },
 
-   -- autoclose tags  
+  -- autoclose tags
   {
     "windwp/nvim-ts-autotag",
     dependencies = "nvim-treesitter/nvim-treesitter",
-    event = "VeryLazy",
+    event = "InsertEnter",
     config = function()
       require("nvim-ts-autotag").setup()
     end,
