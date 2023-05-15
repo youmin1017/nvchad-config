@@ -24,9 +24,6 @@ vim.fn.setenv("FIG_TERM", nil)
 
 vim.wo.wrap = false
 
-
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
-
 -------------------------------------- autocmnds ------------------------------------------
 local autocmd = vim.api.nvim_create_autocmd
 -- Auto resize panes when resizing nvim window
