@@ -19,8 +19,8 @@ M.general = {
   x = {
     ["<"] = { "<gv", "indent backword and stay in visual mode" },
     [">"] = { ">gv", "indent forward and stay in visual mode" },
-    ["J"] = { ":move '>+1<CR>gv-gv", "move selected block up and stay in visual mode" },
-    ["K"] = { ":move '<-2<CR>gv-gv", "move selected down and stay in visual mode" },
+    ["<M-j>"] = { ":move '>+1<CR>gv-gv", "move selected block up and stay in visual mode", opts = { silent = true } },
+    ["<M-k>"] = { ":move '<-2<CR>gv-gv", "move selected down and stay in visual mode", opts = { silent = true } },
   },
 }
 
