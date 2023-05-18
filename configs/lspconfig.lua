@@ -3,9 +3,8 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 
-local servers = { "html", "cssls", "tsserver", "clangd", "pyright", "prismals",
-                  "tailwindcss",
-                }
+-- { "html", "cssls", "tsserver", "clangd", "pyright", "prismals", "tailwindcss" }
+local servers = {}
 
 capabilities.offsetEncoding = { "utf-16" }
 for _, lsp in ipairs(servers) do

@@ -91,6 +91,7 @@ local plugins = {
     end,
   },
 
+  { import = "custom.configs.extras.mason" },
 }
 
 return plugins
