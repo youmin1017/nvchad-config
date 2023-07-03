@@ -59,8 +59,8 @@ M.nvimtree = {
         git = true,
       },
       glyphs = {
-        folder = {
-          default = "",
+        git = {
+          untracked = "", -- "󰧟",
         },
       },
     },
@@ -95,10 +95,10 @@ M.nvterm = {
   terminals = {
     type_opts = {
       float = {
-        row = 0.2,
+        row = 0.15,
         col = 0.1,
         width = 0.8,
-        height = 0.6,
+        height = 0.7,
         border = "single",
       },
     },

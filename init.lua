@@ -21,6 +21,7 @@ end
 -- To enable fig autocomplete
 -- ref: https://github.com/withfig/fig/issues/2380#issuecomment-1449107507
 vim.fn.setenv("FIG_TERM", nil)
+vim.fn.setenv("PAGER", "less")
 
 vim.wo.wrap = false
 

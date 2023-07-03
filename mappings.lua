@@ -14,6 +14,12 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<"] = { "<<", "indent forward easily", opts = { nowait = true } },
     [">"] = { ">>", "indent forward easily", opts = { nowait = true } },
+    ["X"] = {
+      function()
+        require("nvchad_ui.tabufline").closeAllBufs()
+      end,
+      "close all tabufline buffers",
+    },
   },
 
   x = {
@@ -38,6 +44,20 @@ M.lspconfig = {
         vim.diagnostic.open_float { border = "rounded" }
       end,
       "floating diagnostic",
+    },
+  },
+}
+
+M.dap = {
+  n = {
+    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>", "toggle breakpoint" },
+    ["<leader>dus"] = {
+      function()
+        local widgets = require "dap.ui.widgets"
+        local sidebar = widgets.sidebar(widgets.scopes)
+        sidebar.open()
+      end,
+      "Open debugging sidebar",
     },
   },
 }
