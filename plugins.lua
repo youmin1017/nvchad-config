@@ -49,10 +49,10 @@ local plugins = {
   },
 
   { import = "custom.configs.extras.mason" },
-  { import = "custom.configs.extras.mason-null-ls" },
+  -- { import = "custom.configs.extras.mason-null-ls" },
   { import = "custom.configs.extras.dressing" },
   { import = "custom.configs.extras.surround" },
-  { import = "custom.configs.extras.rust-tools" },
+  -- { import = "custom.configs.extras.rust-tools" },
 
   -- overrde plugin configs
   {
