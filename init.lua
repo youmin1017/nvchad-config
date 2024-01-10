@@ -1,5 +1,3 @@
-local opt = vim.opt
-
 local function open_nvim_tree(data)
 
   -- buffer is a directory
@@ -24,6 +22,8 @@ vim.fn.setenv("FIG_TERM", nil)
 vim.fn.setenv("PAGER", "less")
 
 vim.wo.wrap = false
+vim.opt.formatoptions:append("mM")
+vim.opt.clipboard = nil
 
 -------------------------------------- autocmnds ------------------------------------------
 local autocmd = vim.api.nvim_create_autocmd

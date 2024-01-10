@@ -2,32 +2,13 @@ local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
+  { import = "custom.configs.extras.mason" },
+  -- { import = "custom.configs.extras.mason-null-ls" },
+  { import = "custom.configs.extras.dressing" },
+  { import = "custom.configs.extras.surround" },
+  -- { import = "custom.configs.extras.rust-tools" },
+  { import = "custom.configs.extras.formatter" },
 
-  -- Override plugin definition options
-
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   dependencies = {
-  --     -- format & linting
-  --     {
-  --       "jose-elias-alvarez/null-ls.nvim",
-  --       config = function()
-  --         require "custom.configs.null-ls"
-  --       end,
-  --     },
-  --   },
-  --
-  --   config = function()
-  --     require "plugins.configs.lspconfig"
-  --     require "custom.configs.lspconfig"
-  --   end,
-  -- },
-
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
 
   -- Install plugins
   {
@@ -47,12 +28,6 @@ local plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
-
-  { import = "custom.configs.extras.mason" },
-  -- { import = "custom.configs.extras.mason-null-ls" },
-  { import = "custom.configs.extras.dressing" },
-  { import = "custom.configs.extras.surround" },
-  -- { import = "custom.configs.extras.rust-tools" },
 
   -- overrde plugin configs
   {
