@@ -18,7 +18,7 @@ M.general = {
     ["gl"] = { "g$", "Go to end of line" },
     ["X"] = {
       function()
-        require("nvchad_ui.tabufline").closeAllBufs()
+        require('nvchad.tabufline').closeAllBufs()
       end,
       "close all tabufline buffers",
     },
